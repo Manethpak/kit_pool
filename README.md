@@ -1,4 +1,4 @@
-# kit_pool
+# kit_poll
 
 ## Project setup
 ```
