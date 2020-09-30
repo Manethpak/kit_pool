@@ -14,7 +14,7 @@
                         Excepturi reprehenderit explicabo fuga molestiae. Odit autem natus voluptatum eos vel iusto voluptate rerum consectetur 
                         aut exercitationem, iste, quod cumque quam. Architecto?
                     </p>
-                    <a href="#" class="btn btn-red shadow">Get Started With Us!</a>
+                    <router-link to="sign-up" class="btn btn-red shadow">Get Started With Us!</router-link>
                 </div>
             </div>
         </div>
@@ -23,7 +23,7 @@
 
 
 <script>
-import NavBar from './NavBar'
+import NavBar from './view/NavBar'
 
 export default {
     name: 'Home',

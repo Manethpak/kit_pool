@@ -6,28 +6,34 @@
 
                 <ul class="nav nav-pills nav-fill">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">
+                        <router-link to="/" class="nav-link"
+                        v-on:click="onPage = 'home'"
+                        v-bind:class="[onPage == 'home'? activePage : '']">
                             <font-awesome-icon :icon="homeIcon" />
-                        </a>
+                        </router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <router-link to="/question-submission" class="nav-link"
+                        v-on:click="onPage = 'sub'"
+                        v-bind:class="[onPage == 'sub'? activePage : '']">
                             <font-awesome-icon :icon="commentIcon" />
-                        </a>
+                        </router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <router-link to="/help" class="nav-link" 
+                        v-on:click="onPage = 'help'"
+                        v-bind:class="[onPage == 'help'? activePage : '']">
                             <font-awesome-icon :icon="questionIcon" />
-                        </a>
+                        </router-link>
                     </li>
                 </ul>
 
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sign in</a>
+                        <router-link to="sign-in" class="nav-link" >Sign in</router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sign up</a>
+                        <router-link to="sign-up" class="nav-link" >Sign up</router-link>
                     </li>
                 </ul>
             </div>
@@ -47,13 +53,14 @@ export default {
         return {
             homeIcon: faHome,
             commentIcon: faCommentAlt,
-            questionIcon: faQuestionCircle
+            questionIcon: faQuestionCircle,
+            onPage: '',
+            activePage: 'active'
         }
     },
     components: {
         FontAwesomeIcon
     }
-    
 }
 </script>
 
