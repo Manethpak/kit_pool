@@ -1,17 +1,17 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = '/api/taskslist';
+axios.defaults.baseURL = 'https://kitquizappapi.herokuapp.com/api/users';
 
 export default class PostService {
-    getTasks() {
+    getUser() {
         return axios.get('');
     }
 
-    insetTask(task) {
-        return axios.post('', task);
+    insertUser(user) {
+        return axios.post('', user);
     }
 
-    deleteTask(id) {
+    deleteUser(id) {
         return axios.delete(`/${id}`);
     }
 }
