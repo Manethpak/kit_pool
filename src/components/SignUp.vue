@@ -6,17 +6,17 @@
         <div class="div_sign_up">
             <div class="div">
                 <i class="fas fa-user-circle fa-2x fa-fw"></i>
-                <input placeholder="Username" class="input" v-bind="username">
+                <input placeholder="Username" class="input" v-model="username">
             </div>
 
             <div class="div">
                 <i class="fas fa-envelope fa-2x"></i>
-                <input class="input" placeholder="Email" type="email" v-bind="email">
+                <input class="input" placeholder="Email" type="email" v-model="email">
             </div>
 
             <div class="div">
                 <i class="fas fa-key fa-2x"></i>
-                <input class="input" placeholder="password" type="password" v-bind="password">
+                <input class="input" placeholder="password" type="password" v-model="password">
             </div>
 
             <button class="submit_button" v-on:click="onSubmit">Submit</button>
@@ -33,9 +33,9 @@ export default {
     name: 'SignUp',
     data(){
         return{
-        username:"",
-        email:"",
-        password:""
+        username:'',
+        email:'',
+        password:''
         }
     },
     methods:{
@@ -45,8 +45,12 @@ export default {
                 email: this.email,
                 password: this.password
             }
-            postService.insertUser(user).then(()=> {this.username='',this.email="",this.password=""})
-
+            postService.insertUser(user).then(()=> 
+            {
+                this.username='',
+                this.email='',
+                this.password=''
+            })
         }
     }
 }
