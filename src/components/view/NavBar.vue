@@ -4,7 +4,7 @@
             <div class="container">
                 <span class="navbar-brand mb-1 h1">KITPOLL</span>
 
-                <ul class="nav nav-pills nav-fill">
+                <ul class="nav nav-pills nav-fill ">
                     <li class="nav-item">
                         <router-link to="/" class="nav-link"
                         v-on:click="onPage = 'home'"
@@ -82,10 +82,6 @@ nav.navbar-bg{
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     background:#c0392b;
-    padding: 0.5rem 2rem 0.5rem 2rem;
 }
 
-li.nav-item {
-    margin: 0 1rem;
-}
 </style>
